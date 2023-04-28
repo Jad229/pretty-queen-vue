@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "marble-texture": "url('public/marble-texture.avif')",
+        "marble-texture": "url('/marble-texture.avif')",
       },
     },
   },

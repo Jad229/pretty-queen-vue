@@ -1,5 +1,5 @@
 <script>
-import ProductCard from "./ProductCard.vue";
+import ProductCard from "../components/ProductCard.vue";
 
 export default {
   name: "Home",
@@ -24,11 +24,13 @@ export default {
           >
             Book
           </button>
-          <button
-            class="w-5/6 md:w-1/6 bg-amber-500 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Shop
-          </button>
+          <a href="/products" class="w-5/6 md:w-1/6"
+            ><button
+              class="bg-amber-500 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Shop
+            </button>
+          </a>
         </div>
       </div>
     </div>
