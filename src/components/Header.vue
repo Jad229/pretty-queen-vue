@@ -13,7 +13,7 @@ export default {
     <div class="flex flex-row items-center ms-auto space-x-3">
       <a href="/products">Products</a>
       <a href="/services">Services</a>
-      <a href="/rsvp"
+      <a href="/contact"
         ><button
           class="bg-transparent hover:bg-amber-500 text-amber-700 font-semibold hover:text-white py-2 px-4 border border-amber-500 hover:border-transparent rounded"
         >
