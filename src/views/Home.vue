@@ -49,14 +49,16 @@ export default {
         <div
           class="flex flex-col md:flex-row justify-center items-center space-y-3 md:space-y-0 md:space-x-3"
         >
-          <button
-            class="w-5/6 md:w-1/6 bg-amber-500 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Book
-          </button>
+          <a href="/products" class="w-5/6 md:w-1/6">
+            <button
+              class="w-full bg-amber-500 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Book
+            </button>
+          </a>
           <a href="/products" class="w-5/6 md:w-1/6"
             ><button
-              class="bg-amber-500 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded"
+              class="w-full bg-amber-500 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded"
             >
               Shop
             </button>
