@@ -4,7 +4,8 @@ import App from "./App.vue";
 import "./style.css";
 import About from "./views/About.vue";
 import Home from "./views/Home.vue";
-import Products from "./views/Products.vue"; // <-- Add this line
+import Products from "./views/Products.vue";
+import Services from "./views/Services.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -22,7 +23,7 @@ const router = createRouter({
     {
       path: "/services",
       name: "Services",
-      component: About,
+      component: Services,
     },
     {
       path: "/about",

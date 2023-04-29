@@ -4,6 +4,36 @@ import ProductCard from "../components/ProductCard.vue";
 export default {
   name: "Home",
   components: { ProductCard },
+  data() {
+    return {
+      products: [
+        {
+          name: "Item 1",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! ",
+          price: "$100",
+        },
+        {
+          name: "Item 2",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, doloremque!",
+          price: "$80",
+        },
+        {
+          name: "Item 3",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quae.",
+          price: "$120",
+        },
+        {
+          name: "Item 4",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, earum.",
+          price: "$90",
+        },
+      ],
+    };
+  },
 };
 </script>
 <template>
@@ -55,7 +85,7 @@ export default {
         </p>
       </div>
     </div>
-    <div class="flex flex-col max-w-7xl mx-auto mt-10 space-y-10 text-center">
+    <div class="flex flex-col max-w-4xl mx-auto mt-10 space-y-10 text-center">
       <div>
         <h2 class="text-2xl font-semibold">Customer Favorites</h2>
         <p class="text-neutral-600">Here's what our clients love!</p>
@@ -64,12 +94,11 @@ export default {
       <div
         class="flex flex-col flex-wrap md:flex-row space-y-5 md:space-y-0 md:space-x-0 gap-5 justify-center items-center"
       >
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <ProductCard
+          v-for="(product, index) in products"
+          :key="index"
+          :product="product"
+        />
       </div>
     </div>
   </section>

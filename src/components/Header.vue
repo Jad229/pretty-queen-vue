@@ -5,7 +5,7 @@ export default {
 </script>
 <template>
   <nav
-    class="flex flex-row max-w-7xl mx-auto py-5 px-16 bg-white backdrop-filter backdrop-blur-lg bg-opacity-10"
+    class="flex flex-row max-w-7xl mx-auto py-5 px-16 bg-white backdrop-filter backdrop-blur-xl bg-opacity-10"
   >
     <div class="flex flex-row me-auto space-x-3">
       <a href="/" class="text-4xl font-bold text-amber-400">Pretty Queen</a>

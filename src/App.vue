@@ -11,9 +11,11 @@ export default {
 </script>
 
 <template>
-  <Header />
-  <router-view></router-view>
-  <Footer />
+  <body class="bg-neutral-100">
+    <Header />
+    <router-view></router-view>
+    <Footer />
+  </body>
 </template>
 
 <style scoped></style>
