@@ -1,6 +1,12 @@
 <script>
 import ServiceCard from "../components/ServiceCard.vue";
-import { haircuts, colors } from "../scripts/services";
+import {
+  haircuts,
+  colors,
+  treatments,
+  makeupAndBridalServices,
+  permsAndStraightening,
+} from "../scripts/services";
 
 export default {
   name: "Services",
@@ -11,6 +17,15 @@ export default {
     },
     colors() {
       return colors;
+    },
+    treatments() {
+      return treatments;
+    },
+    makeupAndBridalServices() {
+      return makeupAndBridalServices;
+    },
+    permsAndStraightening() {
+      return permsAndStraightening;
     },
   },
 };
@@ -24,12 +39,14 @@ export default {
             Haircuts and Styling
           </h2>
         </div>
-        <div class="space-x-6 mt-10 flex justify-center">
+        <div
+          class="flex flex-col md:flex-row flex-wrap max-w-4xl gap-10 mx-auto mt-10 justify-center"
+        >
           <ServiceCard
             v-for="(haircut, index) in haircuts"
             :key="index"
             :service="haircut"
-            class="w-full"
+            class="w-full md:w-1/4"
           />
         </div>
         <div class="text-center">
@@ -37,12 +54,59 @@ export default {
             Colors and Treatments
           </h2>
         </div>
-        <div class="space-x-6 mt-10 flex justify-center">
+        <div
+          class="flex flex-col md:flex-row flex-wrap max-w-4xl gap-10 mx-auto mt-10 justify-center"
+        >
           <ServiceCard
             v-for="(color, index) in colors"
             :key="index"
             :service="color"
-            class="w-full"
+            class="w-full md:w-1/4"
+          />
+        </div>
+        <div class="text-center">
+          <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            Treatments
+          </h2>
+        </div>
+        <div
+          class="flex flex-col md:flex-row flex-wrap max-w-4xl gap-10 mx-auto mt-10 justify-center"
+        >
+          <ServiceCard
+            v-for="(treatment, index) in treatments"
+            :key="index"
+            :service="treatment"
+            class="w-full md:w-1/4"
+          />
+        </div>
+        <div class="text-center">
+          <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            Perms And Straightening
+          </h2>
+        </div>
+        <div
+          class="flex flex-col md:flex-row flex-wrap max-w-4xl gap-10 mx-auto mt-10 justify-center"
+        >
+          <ServiceCard
+            v-for="(treatment, index) in permsAndStraightening"
+            :key="index"
+            :service="treatment"
+            class="w-full md:w-1/4"
+          />
+        </div>
+        <div class="text-center">
+          <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            Makeup and Bridal Services
+          </h2>
+        </div>
+        <div
+          class="flex flex-col md:flex-row flex-wrap max-w-4xl gap-10 mx-auto mt-10 justify-center"
+        >
+          <ServiceCard
+            v-for="(service, index) in makeupAndBridalServices"
+            :key="index"
+            :service="service"
+            class="w-full md:w-1/4"
           />
         </div>
       </div>
